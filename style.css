@@ -1,0 +1,49 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title{
+    font-size:2rem;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Using floats */
+/* large display (3 collumn) babohar korte chaile container margin dite hobe  */
+.container{
+    width: 100%;
+   /* margin-left: 14%; */
+
+}
+
+.grid-col {
+    float: left;
+    width: 50%;
+  }
+  .grid-item img{
+    width: 100%;
+    object-fit: cover;
+  }
+  .grid-item{
+    margin: 5px ; 
+
+  }
+  
+  /* large display 3 collumn babohar korte chaile .grid-col--4 { display: none } dite hobe  */
+  /* 2 columns by default, hide columns 2 & 3 */
+  .grid-col--2, .grid-col--3 { display: none }
+  
+  /* 3 columns at medium size */
+  @media ( min-width: 768px ) {
+    .grid-col { width: 33.333%; }
+    .grid-col--2 { display: block; } /* show column 2 */
+  }
+  
+  /* 4 columns at large size */
+  @media ( min-width: 1080px ) {
+    .grid-col { width: 25%; }
+    .grid-col--3 { display: block; } /* show column 3 */
+  }
